@@ -3,7 +3,7 @@ import {createContext, useState} from 'react';
 import {v4 as uuidv4} from 'uuid';
 
 const LogContext = createContext();
-
+console.log(new Date().toISOString());
 export function LogContextProvider({children}) {
   const [logs, setLogs] = useState([
     {

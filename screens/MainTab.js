@@ -16,7 +16,7 @@ function MainTab() {
       }}>
       <Tab.Screen
         name="Feeds"
-        component={FeedsScreen}
+        component={SearchScreen}
         options={{
           tabBarIcon: ({color, size}) => (
             <Icon name="view-stream" size={size} color={color} />
@@ -38,6 +38,15 @@ function MainTab() {
         options={{
           tabBarIcon: ({color, size}) => (
             <Icon name="search" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Map"
+        component={SearchScreen}
+        options={{
+          tabBarIcon: ({color, size}) => (
+            <Icon name="map" size={size} color={color} />
           ),
         }}
       />
