@@ -5,10 +5,10 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import WriteEditor from '../components/WriteEditor';
 import WriteHeader from '../components/WriteHeader';
 import LogContext from '../contexts/LogContext';
+import {nowdate} from '../screens/CalendarScreen';
 
 function WriteScreen({route}) {
   const log = route.params?.log;
-
   const [title, setTitle] = useState(log?.title ?? '');
   const [body, setBody] = useState(log?.body ?? '');
   const navigation = useNavigation();
@@ -18,7 +18,7 @@ function WriteScreen({route}) {
     if (log) {
       onModify({
         id: log.id,
-        date: log.date,
+        date: nowdate.toString(),
         title,
         body,
       });
@@ -27,7 +27,7 @@ function WriteScreen({route}) {
         title,
         body,
         // 날짜를 문자열로 변환
-        date: new Date().toISOString(),
+        date: nowdate.toString(),
       });
     }
     navigation.pop();

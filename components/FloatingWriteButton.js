@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 function FloatingWriteButton() {
     const navigation = useNavigation();
     const onPress = () => {
-      navigation.navigate('Write');
+      navigation.navigate('Write',{data:"hi"});
     };
   
     return (

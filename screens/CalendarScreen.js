@@ -1,11 +1,14 @@
 import { format } from 'date-fns';
 import React, { useContext, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import CalendarView from '../components/CalendarView';
 import FeedList from '../components/FeedList';
 import LogContext from '../contexts/LogContext';
 import FloatingWriteButton from '../components/FloatingWriteButton';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import WriteScreen from './WriteScreen';
 
+export let nowdate=1
 function CalendarScreen() {
   const { logs } = useContext(LogContext);
   const [selectedDate, setSelectedDate] = useState(
@@ -17,10 +20,11 @@ function CalendarScreen() {
     acc[formattedDate] = { marked: true };
     return acc;
   }, {});
-
+  nowdate=selectedDate
   const filteredLogs = logs.filter(
     (log) => format(new Date(log.date), 'yyyy-MM-dd') === selectedDate,
   );
+
   return (
     <View style={styles.block}>
       <FeedList
@@ -37,6 +41,8 @@ function CalendarScreen() {
     </View>
   );
 }
+
+
 const styles = StyleSheet.create({
   block: {
     flex: 1,
