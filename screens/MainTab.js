@@ -1,9 +1,9 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import FeedsScreen from './FeedsScreen';
 import CalendarScreen from './CalendarScreen';
 import SearchScreen from './SearchScreen';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon1 from 'react-native-vector-icons/FontAwesome';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,11 +15,20 @@ function MainTab() {
         activeTintColor: '#009688',
       }}>
       <Tab.Screen
-        name="Feeds"
+        name="map"
         component={SearchScreen}
         options={{
           tabBarIcon: ({color, size}) => (
-            <Icon name="view-stream" size={size} color={color} />
+            <Icon1 name="map-marker" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="chatbot"
+        component={SearchScreen}
+        options={{
+          tabBarIcon: ({color, size}) => (
+            <Icon1 name="wechat" size={size} color={color} />
           ),
         }}
       />
@@ -33,11 +42,11 @@ function MainTab() {
         }}
       />
       <Tab.Screen
-        name="Search"
+        name="community"
         component={SearchScreen}
         options={{
           tabBarIcon: ({color, size}) => (
-            <Icon name="search" size={size} color={color} />
+            <Icon name="view-list" size={size} color={color} />
           ),
         }}
       />
@@ -46,7 +55,7 @@ function MainTab() {
         component={SearchScreen}
         options={{
           tabBarIcon: ({color, size}) => (
-            <Icon name="map" size={size} color={color} />
+            <Icon name="settings" size={size} color={color} />
           ),
         }}
       />

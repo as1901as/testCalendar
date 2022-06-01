@@ -10,7 +10,6 @@ function CalendarView({markedDates, selectedDate, onSelectDate}) {
       marked: markedDates[selectedDate]?.marked,
     },
   };
-
   return (
     <Calendar
       style={styles.calendar}

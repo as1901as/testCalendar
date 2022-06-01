@@ -1,8 +1,14 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet} from 'react-native';
+import { WebView } from 'react-native-webview';
 
 function SearchScreen() {
-  return <View style={styles.block} />;
+    return (
+      <WebView
+        source={{uri: 'https://www.naver.com'}}
+        style={{marginTop: 20}}
+      />
+    );
 }
 
 const styles = StyleSheet.create({

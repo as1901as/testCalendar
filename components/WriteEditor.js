@@ -17,7 +17,7 @@ function WriteEditor({title, body, onChangeTitle, onChangeBody}) {
         }}
       />
       <TextInput
-        placeholder="당신의 오늘을 기록해보세요"
+        placeholder="당신의 일정을 기록해보세요"
         style={styles.bodyInput}
         multiline
         textAlignVertical="top"

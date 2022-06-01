@@ -5,19 +5,19 @@ import {ko} from 'date-fns/locale';
 import {useNavigation} from '@react-navigation/native';
 import 'react-native-get-random-values'
 
-function formatDate(date) {
-  const d = new Date(date);
-  const now = Date.now();
-  const diff = (now - d.getTime()) / 1000;
-
-  if (diff < 60 * 1) {
-    return '방금 전';
-  }
-  if (diff < 60 * 60 * 24 * 3) {
-    return formatDistanceToNow(d, {addSuffix: true, locale: ko});
-  }
-  return format(d, 'PPP EEE p', {locale: ko});
-}
+// function formatDate(date) {
+//   const d = new Date(date);
+//   const now = Date.now();
+//   const diff = (now - d.getTime()) / 1000;
+//   console.log(diff)
+//   if (diff < 60 * 1) {
+//     return '방금 전';
+//   }
+//   if (diff < 60 * 60 * 24 * 3) {
+//     return formatDistanceToNow(d, {addSuffix: true, locale: ko});
+//   }
+//   return format(d, 'PPP EEE p', {locale: ko});
+// }
 
 function truncate(text) {
   // 정규식을 사용해 모든 줄 바꿈 문자 제거
@@ -46,7 +46,7 @@ function FeedListItem({log}) {
         android_ripple={{color: '#ededed'}}
         onPress={onPress}>
           
-      <Text style={styles.date}>{formatDate(date)}</Text>
+      {/* <Text style={styles.date}>{formatDate(date)}</Text> */}
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.body}>{truncate(body)}</Text>
     </Pressable>
