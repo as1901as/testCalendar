@@ -2,6 +2,9 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import CalendarScreen from './CalendarScreen';
 import SearchScreen from './SearchScreen';
+import CommunityScreen from './FeedsScreen';
+import MapScreen from './MapScreen';
+import SettingScreen from './SettingScreen';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Icon1 from 'react-native-vector-icons/FontAwesome';
 
@@ -16,7 +19,7 @@ function MainTab() {
       }}>
       <Tab.Screen
         name="map"
-        component={SearchScreen}
+        component={MapScreen}
         options={{
           tabBarIcon: ({color, size}) => (
             <Icon1 name="map-marker" size={size} color={color} />
@@ -43,7 +46,7 @@ function MainTab() {
       />
       <Tab.Screen
         name="community"
-        component={SearchScreen}
+        component={CommunityScreen}
         options={{
           tabBarIcon: ({color, size}) => (
             <Icon name="view-list" size={size} color={color} />
@@ -51,8 +54,8 @@ function MainTab() {
         }}
       />
       <Tab.Screen
-        name="Map"
-        component={SearchScreen}
+        name="Setting"
+        component={SettingScreen}
         options={{
           tabBarIcon: ({color, size}) => (
             <Icon name="settings" size={size} color={color} />

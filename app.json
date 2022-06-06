@@ -18,12 +18,20 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dain.sopreact",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAtFL8rYSx68s5ChR07sh1b9x-JFLIXeEI"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.dain.sopreact",
+      "config":{
+        "googleMaps": {"apiKey": "AIzaSyACqikn_kMnsF8-j3bKcTewJBXoc4h23n8"}
       }
     },
     "web": {

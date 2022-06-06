@@ -1,18 +1,13 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
 import { WebView } from 'react-native-webview';
 
 function SearchScreen() {
     return (
       <WebView
-        source={{uri: 'https://www.naver.com'}}
-        style={{marginTop: 20}}
+        source={{uri: "https://console.dialogflow.com/api-client/demo/embedded/35e7405c-e6c5-4191-aa9f-b87175002b08"}}
+        style={{marginTop: -110}}
       />
     );
 }
-
-const styles = StyleSheet.create({
-  block: {},
-});
 
 export default SearchScreen;
